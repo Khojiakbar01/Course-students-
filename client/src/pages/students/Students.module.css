@@ -1,0 +1,38 @@
+.name {
+    width: 200px;
+}
+
+.description {
+    width: 300px
+}
+
+.enrolled-students {
+    width: 400px;
+}
+button{
+    outline: none;
+    border: none;
+}
+.actions {
+    width: 250px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.actions *{
+    color: white;
+}
+th{
+    border:1px solid black;
+}
+table{
+    text-align: center;
+}
+th,tr,td{
+    border: 2px solid black;
+}
+a{
+    border:none
+}
+

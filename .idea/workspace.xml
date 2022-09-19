@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dee6696b-b9b3-468d-b4a7-3481b7a5ca39" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/client/package.json" />
+  </component>
+  <component name="ProjectId" id="2E1hzjUBIp2LYgACaCp8m9zr5KB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.1.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;GitIgnore&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Technocorp_projects\student_course" />
+      <recent name="D:\Technocorp_projects\student_course\server\utils" />
+      <recent name="D:\Technocorp_projects\student_course\client\src\pages" />
+      <recent name="D:\Technocorp_projects\student_course\client\src\pages\students" />
+      <recent name="D:\Technocorp_projects\student_course\client\src\pages\courses" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.start">
+    <configuration name="authController.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/server/controllers/authController.js" working-dir="$PROJECT_DIR$/server/controllers">
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/server/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+        <item itemvalue="Node.js.authController.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dee6696b-b9b3-468d-b4a7-3481b7a5ca39" name="Changes" comment="" />
+      <created>1661769269276</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661769269276</updated>
+      <workItem from="1661769271560" duration="19986000" />
+      <workItem from="1661858233752" duration="808000" />
+      <workItem from="1661859128695" duration="5177000" />
+      <workItem from="1661917199012" duration="1722000" />
+      <workItem from="1661931258640" duration="932000" />
+      <workItem from="1662350738164" duration="1657000" />
+      <workItem from="1662353129839" duration="7474000" />
+      <workItem from="1662362179130" duration="1292000" />
+      <workItem from="1662374689606" duration="3337000" />
+      <workItem from="1662442832794" duration="2822000" />
+      <workItem from="1662456472713" duration="156000" />
+      <workItem from="1662456738506" duration="147000" />
+      <workItem from="1662456988610" duration="257000" />
+      <workItem from="1662457742687" duration="58000" />
+      <workItem from="1662458026079" duration="40000" />
+      <workItem from="1662458318347" duration="46000" />
+      <workItem from="1662464303735" duration="40000" />
+      <workItem from="1662523358384" duration="12528000" />
+      <workItem from="1662544588336" duration="9232000" />
+      <workItem from="1662610210756" duration="19364000" />
+      <workItem from="1662696158044" duration="12000" />
+      <workItem from="1662720879852" duration="7429000" />
+      <workItem from="1662955192175" duration="2389000" />
+      <workItem from="1662965677699" duration="4939000" />
+      <workItem from="1662973434737" duration="6640000" />
+      <workItem from="1662984045884" duration="881000" />
+      <workItem from="1663044902509" duration="2110000" />
+      <workItem from="1663047715996" duration="6841000" />
+      <workItem from="1663059185741" duration="12219000" />
+      <workItem from="1663130549640" duration="5026000" />
+      <workItem from="1663145078783" duration="11951000" />
+      <workItem from="1663215324799" duration="5065000" />
+      <workItem from="1663221235108" duration="22550000" />
+      <workItem from="1663301203599" duration="3012000" />
+      <workItem from="1663304734457" duration="10666000" />
+      <workItem from="1663560562497" duration="317000" />
+      <workItem from="1663560976160" duration="18191000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,22 @@
+.btn-list{
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+.btn{
+    background-color: #83a7da;
+    border-radius: 5px;
+    padding: 5px 7px;
+}
+
+.current-btn{
+    background-color: #526e73;
+    border-radius: 5px;
+    padding: 5px 7px;
+}
+
+.disabled-btn{
+    cursor: crosshair;
+    pointer-events: none;
+}
