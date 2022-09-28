@@ -100,7 +100,7 @@ exports.updateAdmin = catchAsync(async (req, res, next) => {
 exports.deleteAdmin = catchAsync(async (req, res, next) => {
     const {id} = req.params;
     const byId = await User.findByPk(id);
-    console.log(byId)
+    // console.log(byId)
     if (!byId) {
         return next(new AppError(`Admin with id ${id} not found`))
     }

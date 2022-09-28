@@ -2,7 +2,9 @@ import http from '../../utils/axiosInstance'
 
 export const getStudents = async ({page, size, search}) => {
     const res = await http({url: '/students', params: {page, size, search}})
-    return {content: res.data.data.rows, pagination: res.data.pagination}
+
+    return {content: res.data.data.allStudents.data, pagination: res.data.data.allStudents.pagination}
+
 };
 
 export const deleteStudentHandler = async (id) => {

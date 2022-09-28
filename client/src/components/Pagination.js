@@ -5,12 +5,12 @@ import {Button} from "@mui/material";
 import {useNavigate} from "react-router-dom";
 
 function Pagination({route, pagination, size, paginate}) {
-    const {allPages} = pagination
+    const {allPagesCount} = pagination
     const pageNumber = [];
     const navigate = useNavigate();
 
 
-    for (let i = 1; i <= allPages; i++) {
+    for (let i = 1; i <= allPagesCount; i++) {
         pageNumber.push(i);
     }
 

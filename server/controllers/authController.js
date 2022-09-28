@@ -148,7 +148,7 @@ exports.login = catchAsync(async (req, res, next) => {
         return next(new appError('Login or password wrong', 400));
     }
 
-    console.log(candidate)
+
     const passwordIsMatch = await compare(password, candidate.password)
 
     if (!passwordIsMatch) {

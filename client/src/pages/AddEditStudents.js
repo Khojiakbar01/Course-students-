@@ -34,9 +34,9 @@ const AddEditStudents = () => {
         }
     }, [])
     const getCourses = async () => {
-        const res = await axios.get("http://localhost:7070/api/v1/courses?page=1&size=0")
-        console.log(res)
-        setCourses(res.data.data.rows);
+        const res = await axios.get("http://localhost:7070/api/v1/courses?page=1")
+
+        setCourses(res.data.data.allCourses.data);
     }
     const onSubmit = async (data) => {
         await send({data, isUpdate, id})
@@ -47,7 +47,7 @@ const AddEditStudents = () => {
 
     const studentById = async () => {
         const res = await axios.get(`http://localhost:7070/api/v1/students/${params.id}`);
-        // console.log(res)
+
         reset(res.data.data.byId)
     };
 
@@ -114,9 +114,11 @@ const AddEditStudents = () => {
                     {errors.func && (
                         <p style={{color: "red"}}> {errors.func.message}</p>
                         )}
-                        <button className="btnLogin"><Button variant={"contained"} size={"large"} className="btnLogin"
+                        {/*<button className="btnLogin">*/}
+                            <Button type={'submit'} variant={"contained"} size={"large"} className="btnLogin"
                         startIcon={<AddIcon/>}>
-                        Create</Button></button>
+                        Create</Button>
+                        {/*</button>*/}
                         </form>
                         </Layout>
                     }

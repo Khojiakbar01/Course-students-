@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dee6696b-b9b3-468d-b4a7-3481b7a5ca39" name="Changes" comment="" />
+    <list default="true" id="dee6696b-b9b3-468d-b4a7-3481b7a5ca39" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/server/utils/QueryBuilder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Pagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Pagination.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/AddEditCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/AddEditCourse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/AddEditStudents.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/AddEditStudents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/api/coursesApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/api/coursesApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/api/studentsApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/api/studentsApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/adminsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/adminsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/authController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/courseController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/courseController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/studentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/studentController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/middlewares/authMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/middlewares/authMiddleware.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,11 +138,29 @@
       <workItem from="1663301203599" duration="3012000" />
       <workItem from="1663304734457" duration="10666000" />
       <workItem from="1663560562497" duration="317000" />
-      <workItem from="1663560976160" duration="18191000" />
+      <workItem from="1663560976160" duration="19663000" />
+      <workItem from="1663819943459" duration="864000" />
+      <workItem from="1663844105313" duration="2297000" />
+      <workItem from="1664165141248" duration="14259000" />
+      <workItem from="1664189059061" duration="1444000" />
+      <workItem from="1664249844892" duration="9741000" />
+      <workItem from="1664268595484" duration="611000" />
+      <workItem from="1664338243324" duration="751000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

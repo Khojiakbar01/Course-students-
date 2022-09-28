@@ -29,7 +29,7 @@ const AddEditCourse = () => {
 
     const onSubmit = async data => {
         await send({data, isUpdate, id})
-        console.log(data)
+
         getAllCourses()
         navigate(-1)
     }
@@ -71,10 +71,10 @@ const AddEditCourse = () => {
                 })}
             />
             {errors.description && <p>{errors.description.message}</p>}
-            <button>
-                <Button variant={"contained"} size={"large"} className="btnLogin" startIcon={<AddIcon/>}>
+            {/*<button>*/}
+                <Button type={'submit'} variant={"contained"} size={"large"} className="btnLogin" startIcon={<AddIcon/>}>
                 Create</Button>
-            </button>
+            {/*</button>*/}
         </form>
 
     </Layout>

@@ -1,11 +1,12 @@
 import http from '../../utils/axiosInstance'
 import {useSelector} from "react-redux";
 
-export const getCourses = async ({page, size,search}) => {
+export const getCourses = async ({page, size, search}) => {
 
-    const res = await http({url: '/courses', params: {page, size,search}})
+    const res = await http({url: '/courses', params: {page, size, search}})
 
-    return {content: res.data.data.rows, pagination: res.data.pagination}
+    console.log(res)
+    return {content: res.data.data.allCourses.data, pagination: res.data.data.allCourses.pagination}
 };
 
 export const deleteCourseHandler = async (id) => {

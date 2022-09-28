@@ -5,46 +5,54 @@ const {validationResult} = require('express-validator')
 const AppError = require("../utils/constants/appError");
 // const ejs = require('ejs')
 // const pagination = require('../pagination/Pagination')
+const QueryBuilder = require('../utils/QueryBuilder')
 
 exports.getAllCourses = catchAsync(async (req, res, next) => {
-    const {page = 1, size, search} = req.query;
+    const queryBuilder = new QueryBuilder(req.query)
 
-    // const allCourses = await pagination(req.query, Course, {})
-    const allCourses = await Course.findAndCountAll({
-        offset: +size === 0 ? 0 : (page - 1) * size,
-        limit: +size === 0 ? null : 3,
-        // where: search && {[Op.or]: [{name: {[Op.iLike]: `%${search}% `}}, {description: {[Op.iLike]: ` %${search}% `}}]}
-        where: search && {
-            [Op.or]: [
-                {name: {[Op.iLike]: `%${search}%`}},
-                {description: {[Op.iLike]: `%${search}% `}},
-            ],
-        },
-    })
+    queryBuilder
+        .filter()
+        .paginate()
+        .limitFields()
+        .search(["name", "description"])
+        .sort()
 
-    allCourses.totalPages = Math.ceil(allCourses.count / size) || 1
+    let allCourses = await Course.findAndCountAll(queryBuilder.queryOptions);
+    allCourses = queryBuilder.createPagination(allCourses)
 
-    // if (!(page <= allCourses.page) && !(size <= allCourses.count)) {
-    //     return next(new AppError(`Required information (page${page}, size of information: ${size})`))
-    // }
-    // const allCourses = await Course.findAndCountAll()
-    // allCourses.totalPages = Math.ceil(allCourses.count / size) || 0
+
+    // const {page = 1, size, search} = req.query;
+    //
+    // // const allCourses = await pagination(req.query, Course, {})
+    // const allCourses = await Course.findAndCountAll({
+    //     offset: +size === 0 ? 0 : (page - 1) * size,
+    //     limit: +size === 0 ? null : 3,
+    //     where: search && {
+    //         [Op.or]: [
+    //             {name: {[Op.iLike]: `%${search}%`}},
+    //             {description: {[Op.iLike]: `%${search}% `}},
+    //         ],
+    //     },
+    // })
+    //
+    // allCourses.totalPages = Math.ceil(allCourses.count / size) || 1
+
 
     res.json({
         status: 'success',
         message: 'All courses found',
         data: {
-            ...allCourses
+            allCourses
         },
-        pagination: {
-            allPages: allCourses.totalPages,
-            totalItems: allCourses.count,
-            isLastPage: allCourses.totalPages === +page,
-            isFirstPage: (+page - 1) === 0,
-            hasNextPage: allCourses.totalPages > +page,
-            page: page || 1
-
-        }
+        // pagination: {
+        //     allPages: allCourses.totalPages,
+        //     totalItems: allCourses.count,
+        //     isLastPage: allCourses.totalPages === +page,
+        //     isFirstPage: (+page - 1) === 0,
+        //     hasNextPage: allCourses.totalPages > +page,
+        //     page: page || 1
+        //
+        // }
     })
 })
 

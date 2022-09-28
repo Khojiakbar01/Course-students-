@@ -21,7 +21,7 @@ const Login = () => {
     const {handleSubmit, register, formState: {errors}} = useForm({resolver: yupResolver(userSchema)});
     const dispatch = useDispatch()
 
-    console.log(errors)
+
     const loginHandler = async (loginData) => {
         try {
             const res = await axios.post('http://localhost:7070/api/v1/auth/login', loginData)

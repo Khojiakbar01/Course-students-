@@ -4,25 +4,40 @@ const Course = require("../models/Courses");
 const catchAsync = require('../utils/constants/catchAsync')
 const AppError = require('../utils/constants/appError')
 const {validationResult} = require('express-validator')
+const QueryBuilder = require('../utils/QueryBuilder')
 
 exports.getAllStudents = catchAsync(async (req, res, next) => {
-    const {page = 1, size = 5,search} = req.query;
+    const queryBuilder = new QueryBuilder(req.query);
+
+    queryBuilder
+        .filter()
+        .paginate()
+        .limitFields()
+        .search(["firstName", "lastName","birthDate"])
+        .sort()
 
 
 
-    const allStudents = await Student.findAndCountAll({
-        offset: (page - 1) * size,
-        limit: size,
-        where: search && {
-            [Op.or]: [
-                {firstName: {[Op.iLike]: `%${search}%`}},
-                {lastName: {[Op.iLike]: `%${search}% `}},
-            ],
-        },
-    })
+    let allStudents = await Student.findAndCountAll(queryBuilder.queryOptions)
+    allStudents = queryBuilder.createPagination(allStudents)
 
-
-    allStudents.totalPages = Math.ceil(allStudents.count / size)
+    // const {page = 1, size = 5,search} = req.query;
+    //
+    //
+    //
+    // const allStudents = await Student.findAndCountAll({
+    //     offset: (page - 1) * size,
+    //     limit: size,
+    //     where: search && {
+    //         [Op.or]: [
+    //             {firstName: {[Op.iLike]: `%${search}%`}},
+    //             {lastName: {[Op.iLike]: `%${search}% `}},
+    //         ],
+    //     },
+    // })
+    //
+    //
+    // allStudents.totalPages = Math.ceil(allStudents.count / size)
 
     // if (!(page <= allStudents.page) && !(size <= allStudents.count)) {
     //     return next(new AppError(`Required information (page${page}, size of information: ${size})`))
@@ -30,19 +45,21 @@ exports.getAllStudents = catchAsync(async (req, res, next) => {
 
     res.json({
         status: 'success',
-        message: 'All courses found',
-        data: allStudents,
+        message: 'All students found',
+        data: {
+            allStudents
+        },
 
 
-        pagination: {
-            allPages: allStudents.totalPages,
-            totalItems: allStudents.count,
-            isLastPage: allStudents.totalPages===+page,
-            isFirstPage: (+page - 1) === 0,
-            hasNextPage: allStudents.totalPages>+page ,
-            page: page || 1
-
-        }
+        // pagination: {
+        //     allPages: allStudents.totalPages,
+        //     totalItems: allStudents.count,
+        //     isLastPage: allStudents.totalPages===+page,
+        //     isFirstPage: (+page - 1) === 0,
+        //     hasNextPage: allStudents.totalPages>+page ,
+        //     page: page || 1
+        //
+        // }
     })
 
 })
